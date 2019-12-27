@@ -1,0 +1,43 @@
+<html>
+    <head>
+		<link rel="stylesheet" type="text/css" href="/static/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cinzel|Gaegu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poor+Story&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box1">
+                <p> 여기에 표정 들어감!</p>
+            </div>
+            <div class="box2">
+                <br>
+                <span class="title"> Plant Care System  </span>
+                <div class="content">
+                <p>Plant name: {{name}}</p>
+                <p>Water cycle: {{cycle}}</p>
+                <p>Current temp: </p>
+                <p>Current humid: </p>
+                <p>Current state: </p>
+                </div>
+            </div>
+            <div class="box3">
+                <span id="time"></span>
+            </div>
+        </div>
+
+        <script>
+			setTimeout("location.reload()", 1000);
+            function formatDate(date) {
+                return date.getFullYear() + '/' + 
+                    (date.getMonth() + 1) + '/' + 
+                    date.getDate() + ' ' + 
+                    date.getHours() + ':' + 
+                    date.getMinutes() + ':' + 
+                    date.getSeconds();
+            }
+            var d = new Date();
+            document.getElementById("time").innerHTML = formatDate(d);
+        </script>
+                
+    </body>
+</html>
